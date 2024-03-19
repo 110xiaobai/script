@@ -189,14 +189,14 @@ def generate_perception_txt(pack_root,pack_file,cam_list):
         perception_2d_file=json.load(open(os.path.join(perception_2d_path,i_path), 'r'))
         for cam_id in cam_list:
             sync_timestamp = int(perception_2d_file['header']['sync_timestamp_ms'])
-            if cam_id==2:
-                img_name = "perception_image_fov30_{}_2.jpg".format(sync_timestamp,cam_id)
+            if cam_id==1:
+                img_name = "perception_image_fov30_{}_1.jpg".format(sync_timestamp,cam_id)
                 if not os.path.exists(images_fov30_path+img_name):
                     print(img_name, " miss")
                     # continue
                     # assert 0
-            if cam_id==1:
-                img_name = "perception_image_fov120_{}_1.jpg".format(sync_timestamp,cam_id) 
+            if cam_id==2:
+                img_name = "perception_image_fov120_{}_2.jpg".format(sync_timestamp,cam_id) 
                 if not os.path.exists(images_fov120_path+img_name):
                     print(img_name, " miss")
                     # continue
