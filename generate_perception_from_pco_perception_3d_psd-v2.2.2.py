@@ -115,6 +115,7 @@ def parser_lane(dynamic_6v_res,cam_id, img_name, speed, img_time, yaw_rate):
                 lane_dict["lanemark_type"]=lanemark_type_list[lane['lanemark_type']]
             else:
                 lane_dict["lanemark_type"]=0
+            lane_dict["roadedge_type"]=lane.get('roadedge_type')
             coords = lane['coords']
             lane_dict["point_info"]=[]
             for pt in coords:
@@ -137,6 +138,7 @@ def parser_lane(dynamic_6v_res,cam_id, img_name, speed, img_time, yaw_rate):
                 lane_dict["lanemark_type"]=lanemark_type_list[lane['lanemark_type']]
             else:
                 lane_dict["lanemark_type"]=0
+            lane_dict["roadedge_type"]=lane.get('roadedge_type')
             coords = lane['coords']
             lane_dict["point_info"]=[]
             for pt in coords:
